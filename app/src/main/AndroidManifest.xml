@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mofa.loan"
+    android:configChanges="keyboardHidden|orientation"
+    android:screenOrientation="portrait">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
+    <permission
+        android:name="com.mofa.loan.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.mofa.loan.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- <permission android:name="com.fuiou.permission.FUIOU_PAY" /> -->
+    <permission android:name="android.permission.READ_PHONE_STATE"></permission>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 有盾SDK所需权限声明 -->
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <!-- 配置权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name="com.mofa.loan.utils.BaseApplication"
+        android:configChanges="keyboardHidden|orientation"
+        android:icon="@drawable/mofa"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+        <!-- appflyer -->
+        <receiver
+            android:name="com.appsflyer.SingleInstallBroadcastReceiver"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.mofa.loan.receiver.SMSReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle"></activity>
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.mofa.loan" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.mofa.loan.DataProvider"
+            android:exported="false" />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.mofa.loan" />
+            </intent-filter>
+        </service>
+        <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.mofa.loan.DownloadProvider"
+            android:exported="true" />
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required  显示通知栏 -->
+                <category android:name="com.mofa.loan" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.mofa.loan.receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.mofa.loan" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
+        <receiver android:name="com.mofa.loan.utils.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.mofa.loan"></category>
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="e0b8b63f480a9484b5017573" />
+        <!-- </>值来自开发者平台取得的AppKey -->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.mofa.loan.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name="com.mofa.loan.activity.SplashActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mofa.loan.activity.Splash3Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mofa.loan.activity.GuideAcytivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.Guide3Acytivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.Login3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.ForgetPwdOneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.Register3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.ForgetPwdOne3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.IndexActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.MoneyRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.ChooseLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.OutMoneyRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.OutMoneyRecord3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.NewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.BindCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.BindCard3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.RelationInfo2Activity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.settings." />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="com.mofa.loan.activity.RelationInfo3Activity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.settings." />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="com.mofa.loan.activity.BankCardManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.BankCardManage3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.Camera3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.BackMoneyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.BackMoney3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.ProblemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.BaseInfo2Activity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.mofa.loan.activity.BaseInfo3Activity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.mofa.loan.activity.WorkInfo2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.WorkInfo3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.StudentInfo2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.TakePhoto2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.IDCardActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.mofa.loan.activity.IDCard3Activity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.mofa.loan.activity.FacebookAcytivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.Camera2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.BankPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.OnLineBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.CheckOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mofa.loan.activity.CheckOutActivity"
+            android:screenOrientation="portrait" />
+        <!--
+        <activity
+            android:name="com.authreal.ui.SuperActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SuperAppTheme" />
+        <activity
+            android:name="com.authreal.ui.WebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SuperAppTheme" />
+        -->
+        <activity android:name="com.mofa.loan.activity.GetMoneyRecordActivity"></activity>
+        <activity android:name="com.mofa.loan.activity.ProfessionActivity" />
+        <activity android:name="com.mofa.loan.activity.HongbaoActivity" />
+        <activity android:name="com.mofa.loan.activity.HongbaoDetailActivity" />
+        <activity android:name="com.mofa.loan.activity.MoneyDetailActivity" />
+        <activity android:name="com.mofa.loan.activity.ShareActivity" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <!-- 集成facebook -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+
+        <activity android:name="com.facebook.accountkit.ui.AccountKitActivity" />
+        <!--
+        <activity
+            android:name="com.facebook.accountkit.ui.AccountKitActivity"
+            android:theme="@style/AppLoginTheme"
+            tools:replace="android:theme" />
+
+        -->
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1169198366588999"
+            android:exported="true" />
+
+        <!-- Zalo -->
+        <activity
+            android:name="com.zing.zalo.zalosdk.oauth.OpenAPIActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+    </application>
+
+</manifest>

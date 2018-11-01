@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="gray">#999999</drawable>
+    <drawable name="white">#ffffff</drawable>
+    <color name="gray_light">#cccccc</color>
+    <color name="gray_deep">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="backcolor">#E6EAEC</color>
+    <color name="textcolor">#323232</color>
+    <!-- <color name="light_yellor">#F1DEBE</color> -->
+    <color name="gray">#999999</color>
+    <color name="yellor">#2375FF</color>
+    <color name="light_yellor">#F8BB60</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+
+    <color name="pickerview_timebtn_nor">#057dff</color>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_bgColor_overlay">#60000000</color>
+
+    <color name="login_hint">#777777</color>
+    <color name="login_register">#FF833C</color>
+    
+    <color name="index_text_red">#FFFB4747</color>
+    <color name="index_text_gray">#FF898A95</color>
+
+    <color name="register_choose">#121C32</color>
+    
+    <color name="home_background">#edeced</color>
+    <color name="home_black">#FF232453</color>
+    <color name="home_black_deep">#FF222222</color>
+    
+    <color name="home_gray">#FF999999</color>
+    
+    <color name="home_progress1">#FFD35142</color>
+    <color name="home_progress2">#FF56B2BA</color>
+    <color name="green">#FF08AF4B</color>
+
+    <color name="progressbar_background">#FF476891</color>
+    <color name="progressbar_deep_left">#FF58a7c0</color>
+    <color name="progressbar_deep_right">#FF6567e2</color>
+    <color name="progressbar_light_left">#FFf12876</color>
+    <color name="progressbar_light_right">#FF9e47d4</color>
+
+    <color name="colorPrimaryBlack">#DE000000</color>
+    <color name="colorSecondaryBlack">#8A000000</color>
+
+    <color name="colorPrimaryWhite">#FFFFFF</color>
+    <color name="colorSecondaryWhite">#B3FFFFFF</color>
+
+    <color name="colorTextHint">#61000000</color>
+    <color name="colorRipple">#11000000</color>
+
+    <color name="colorBackgroundLight">#F5F6F7</color>
+    <color name="colorBlue">#4A90E2</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorToolBar">#128785</color>
+
+    <color name="colorPrimaryDark">#0f7672</color>
+    <color name="colorPrimaryLight">#F5F6F7</color>
+    <color name="colorPrimary">#0f7672</color>
+    <color name="colorAccent">#DEF44336</color>
+    
+</resources>

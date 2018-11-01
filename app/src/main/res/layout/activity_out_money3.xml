@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical">
+
+    <include layout="@layout/public_title" />
+
+    <com.mofa.loan.xlistview.XListView
+        android:id="@+id/out_money_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:divider="#FFE9EBEE"
+        android:dividerHeight="8dp"
+        android:fadeScrollbars="true"
+        android:listSelector="@null"
+        android:scrollbarSize="10dp"
+        android:scrollbarThumbVertical="@drawable/shape_scrollbar"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ll_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/historyempty"
+        android:visibility="visible" />
+
+
+</LinearLayout>

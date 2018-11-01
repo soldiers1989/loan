@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_up"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#994c4c4c" />
+
+    <View
+        android:id="@+id/view_down"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@+id/iv_cut"
+        android:background="#994c4c4c" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_down"
+        android:layout_below="@+id/view_up"
+        android:layout_toRightOf="@+id/iv_cut"
+        android:background="#994c4c4c" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_down"
+        android:layout_below="@+id/view_up"
+        android:layout_toLeftOf="@+id/iv_cut"
+        android:background="#994c4c4c" />
+
+    <ImageView
+        android:id="@+id/iv_cut"
+        android:layout_width="300dp"
+        android:layout_height="420dp"
+        android:layout_below="@+id/view_up"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/border" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/iv_change"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/switch_camera_heng" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#994c4c4c" >
+
+        <ImageView
+            android:id="@+id/iv_OK"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/gou_heng"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_retake"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/roundwhite"
+            android:scaleType="centerInside"
+            android:src="@drawable/retake"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_takephoto"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/photo_heng"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

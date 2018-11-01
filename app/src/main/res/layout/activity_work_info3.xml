@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/public_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:fadeScrollbars="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_work"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/background9"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_companytype"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/companytype" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Ngành nghề"
+                        android:textColor="#FF444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_companytype"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="Nhập tên ngành nghề"
+                        android:textColor="#FF444444"
+                        android:textColorHint="#FF999999"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/into" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/dot1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/view" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_companyname"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/companyname2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Tên công ty"
+                        android:textColor="#FF444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_companyname"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="Nhập tên công ty"
+                        android:singleLine="true"
+                        android:textColor="#FF444444"
+                        android:textColorHint="#FF999999"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/dot2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/view" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_companyphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/workphone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Điện thoại công ty"
+                        android:textColor="#FF444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_companyphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="Nhập số điện thoại công ty"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="#FF444444"
+                        android:textColorHint="#FF999999"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/dot3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/view" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_companyaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/workaddress" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Địa chỉ công ty"
+                        android:textColor="#FF444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_companyaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="Nhập địa chỉ công ty"
+                        android:singleLine="true"
+                        android:textColor="#FF444444"
+                        android:textColorHint="#FF999999"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/into" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/dot4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/view" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_companyposition"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/workposition" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Chức vụ"
+                        android:textColor="#FF444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_companyposition"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="Nhập chức vụ"
+                        android:singleLine="true"
+                        android:textColor="#FF444444"
+                        android:textColorHint="#FF999999"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/dot5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/view" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_worktime"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/worktime" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Thời gian nhậm chức"
+                        android:textColor="#FF444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_worktime"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="Nhập thời gian nhậm chức"
+                        android:singleLine="true"
+                        android:textColor="#FF444444"
+                        android:textColorHint="#FF999999"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/into" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/dot6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/view" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_wage"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/vndwork" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Mức lương hiện tại"
+                        android:textColor="#FF444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_wage"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="Nhập mức lương hiện tại"
+                        android:singleLine="true"
+                        android:textColor="#FF444444"
+                        android:textColorHint="#FF999999"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/into" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_schoolname"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/companyname2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Tên trường học"
+                        android:textColor="#FF444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_schoolname"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="Nhập tên trường"
+                        android:singleLine="true"
+                        android:textColor="#FF444444"
+                        android:textColorHint="#FF999999"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/dot7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/view"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_schoolroom"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/companyname" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Tên lớp"
+                        android:textColor="#FF444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_schoolroom"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="Nhập lớp học"
+                        android:singleLine="true"
+                        android:textColor="#FF444444"
+                        android:textColorHint="#FF999999"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/dot8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/view"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_schooltime"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/worktime" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Thời gian nhập học"
+                        android:textColor="#FF444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_schooltime"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="Nhập thời gian nhập học"
+                        android:singleLine="true"
+                        android:textColor="#FF444444"
+                        android:textColorHint="#FF999999"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/into" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_workinfo_next"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/home_button"
+                android:text="Hoàn thành"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/ll_time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white"
+   >
+    
+    <RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	     android:paddingLeft="18dp"
+	    android:paddingRight="18dp">
+	    
+	    <TextView
+	        android:id="@+id/money_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="时间:2017-2"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textSize="14sp" />
+	    
+	    <TextView
+	        android:id="@+id/money_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0.0元"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/money_time"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textSize="14sp" />
+	    
+	    <TextView
+	        android:id="@+id/money_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="待审核"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/textcolor"
+            android:textSize="14sp" />
+	</RelativeLayout>
+    <View android:layout_height="1dp"
+        android:background="@color/backcolor"
+        android:layout_width="match_parent"/>
+    
+   
+</LinearLayout>

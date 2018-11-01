@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+
+    <!-- 顶部按钮padding -->
+    <dimen name="pickerview_topbar_padding">20dp</dimen>
+
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">17sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">18sp</dimen>
+    <!-- 选项文字大小 -->
+    <dimen name="pickerview_textsize">20sp</dimen>
+    
+    <dimen name="login_loginsize">17sp</dimen>
+    <dimen name="login_textsize">16sp</dimen>
+    <dimen name="login_forgetsize">15sp</dimen>
+    <dimen name="login_texthintsize">14sp</dimen>
+    
+    <dimen name="register_texthintsize">12sp</dimen>
+    <dimen name="register_choose">18sp</dimen>
+    <dimen name="index">11sp</dimen>
+
+    <dimen name="TEXT_SIZE_NORMAL">15dp</dimen>
+    <dimen name="TEXT_SIZE_LARGE">18dp</dimen>
+    <dimen name="HEIGHT_EDIT_TEXT">48dp</dimen>
+
+</resources>

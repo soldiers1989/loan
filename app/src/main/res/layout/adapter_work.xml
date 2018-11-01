@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    
+		  <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="政府机关/社会团体"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        />
+</LinearLayout>

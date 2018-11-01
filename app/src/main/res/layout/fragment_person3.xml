@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF7F8FB"
+    android:orientation="vertical">
+
+    <include layout="@layout/public_title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/backgroundredbar"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="Các bước xác minh"
+        android:textColor="#FF333333"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-22dp"
+        android:background="@drawable/background"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_bank"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/unverfybank" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ver_dash_line" />
+
+            <ImageView
+                android:id="@+id/iv_baseinfo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/unverfybaseinfo" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ver_dash_line" />
+
+            <ImageView
+                android:id="@+id/iv_relationship"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/unverfyrelationship" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ver_dash_line" />
+
+            <ImageView
+                android:id="@+id/iv_work"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/unverfywork" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ll_bank"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="bottom"
+                    android:text="Xác minh tài khoản ngân hàng"
+                    android:textColor="#FF999999"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_bank_todo"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:text="Chưa xác minh"
+                    android:textColor="#FFFF801A"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_id"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="bottom"
+                    android:text="Xác minh thông tin cá nhân"
+                    android:textColor="#FF999999"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_id_todo"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:text="Chưa xác minh"
+                    android:textColor="#FFFF801A"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_contact"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="bottom"
+                    android:text="Xác minh người liên hệ"
+                    android:textColor="#FF999999"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_contact_todo"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:text="Chưa xác minh"
+                    android:textColor="#FFFF801A"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_profession"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="bottom"
+                    android:text="Xác minh công việc"
+                    android:textColor="#FF999999"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_profession_todo"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:text="Chưa xác minh"
+                    android:textColor="#FFFF801A"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_verfiedbank"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/verfied"
+                android:visibility="invisible" />
+
+
+            <ImageView
+                android:id="@+id/iv_verfiedbaseinfo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/verfied"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iv_verfiedrelationship"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/verfied"
+                android:visibility="invisible" />
+
+
+            <ImageView
+                android:id="@+id/iv_verfiedwork"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/verfied"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

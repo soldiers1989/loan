@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="pickerview_cancel">Hủy</string>
+    <string name="pickerview_submit">Đồng ý</string>
+    <string name="app_name">MOFA</string>
+    <string name="xlistview_header_hint_normal">Kéo xuống để làm mới</string>
+    <string name="xlistview_header_hint_ready">Thả tay làm mới dữ liệu</string>
+    <string name="xlistview_header_hint_loading">Đang tải&#8230;</string>
+    <string name="xlistview_header_last_time">Cập nhật lần cuối</string>
+    <string name="xlistview_footer_hint_normal">Xem thêm</string>
+    <string name="xlistview_footer_hint_ready">Thả tay tải thêm nhiều dữ liệu</string>
+    <string name="loading">Đang tải&#8230;</string>
+    <string name="pickerview_year">Năm</string>
+    <string name="pickerview_month">Tháng</string>
+    <string name="pickerview_day">Ngày</string>
+    <string name="pickerview_hours"></string>
+    <string name="pickerview_minutes"></string>
+    <string name="pickerview_seconds"></string>
+
+    <!-- BackMoney2Activity -->
+    <string name="repayment_submitted">Khoản trả nợ đã nộp</string>
+
+    <!-- BankPayActivity -->
+    <string name="bank_account">TK ngân hàng:</string>
+    <string name="bank_account2">6340 - 2010 - 16520</string>
+    <string name="bankword2">Tên TK: Cty TNHH dịch vụ cầm đồ Xương Thịnh</string>
+    <string name="bankword3">Chi nhánh: Agribank chi nhánh Nhà bè, Hồ Chí Minh</string>
+    <string name="bank_account22">0601 - 6948 - 8153</string>
+    <string name="bankword22">Tên TK: CÔNG TY TNHH DỊCH VỤ CẦM ĐỒ XƯƠNG THỊNH</string>
+    <string name="bankword32">Ngân hàng Sacombank - Chi Nhánh Quận 7</string>
+    <string name="bank_account23">0181 - 0035 - 83038</string>
+    <string name="bankword23">Tên TK: CÔNG TY TNHH DỊCH VỤ CẦM ĐỒ XƯƠNG THỊNH</string>
+    <string name="bankword33">Ngân hàng Vietcombank - Chi nhánh Nam Sài Gòn</string>
+    <string name="bank_account24">6160 - 2010 - 17911</string>
+    <string name="bankword24">Tên TK: CÔNG TY TNHH DỊCH VỤ CẦM ĐỒ XƯƠNG THỊNH</string>
+    <string name="bankword34">Ngân hàng Agribank - Chi Nhánh Nam Sài Gòn</string>
+
+    <!-- BankCardManageActivity -->
+    <string name="name">Họ tên chính bạn</string>
+    <string name="bank_card_manage">Thông tin ngân hàng</string>
+
+    <!-- BaseInfoActivity -->
+
+    <!-- BindCard2Activity -->
+    <string name="IDnumber_0">Số CMND thật</string>
+    <string name="choose_bank">Chọn một ngân hàng</string>
+    <string name="read_and_agree">Tôi đã đọc &#038; đồng ý &#160;</string>
+
+    <!-- Camera2Activity -->
+    <string name="camera_speak1">Vui lòng nói: Tôi là </string>
+    <string name="camera_speak2">Vay tiền thành công bằng ứng dụng Olava</string>
+    <string name="camera_speak3">Vui lòng nói như sau ngay khi ghi hình: </string>
+    <string name="camera_button">Nhấn để ghi hình</string>
+
+    <!-- CameraActivity -->
+
+    <!-- ForgetPwdOneActivity -->
+    <string name="reset_pwd">Đặt lại mật khẩu</string>
+
+    <!-- HomeFragment -->
+    <string name="credits">Hạn mức tín dụng</string>
+    <string name="loan">Vay tiền</string>
+    <string name="loan_amount">Hạn mức khoản vay</string>
+    <string name="check_loan_details">Xem chi tiết khoản vay</string>
+    <string name="upload_video">Đăng tải video</string>
+    <string name="repay">Vui lòng trả vay</string>
+    <string name="check_repay">Đang xác nhận trả vay</string>
+    <string name="waiting_for_the_loan">Đang chờ giải ngân</string>
+    <string name="approve_the_amount">Số tiền được duyệt</string>
+
+    <!-- IndexActivity -->
+    <string name="Home">Trang chủ</string>
+    <string name="Me">Xác minh</string>
+    <string name="More">Tôi</string>
+    <string name="open_GPS_please">mở GPS</string>
+
+    <!-- IWantMoneyActivity -->
+    <string name="loan_protocol">《Thoả thuận vay》</string>
+    <string name="should_back_loan2">Số tiền cần trả</string>
+
+    <!-- LoginActivity -->
+    <string name="forget_pwd">Quên mật khẩu &#63;</string>
+
+    <!-- MoreFragment -->
+
+    <!-- MyInfoActivity -->
+
+    <!-- NewsActivity -->
+    <string name="msg_center">Trung tâm tin tức</string>
+    <string name="no_msg">Hiện không có thông tin của bạn</string>
+
+    <!-- OutMoneyRecordActivity -->
+    <string name="loan_record">Lịch sử vay</string>
+    <string name="period_15">15 ngày</string>
+    <string name="period_30">30 ngày</string>
+    <string name="loan_check">Khoản vay đang thẩm định</string>
+    <string name="repay_please">trả nợ</string>
+    <string name="loan_audit_failed">Khoản vay thẩm định thất bại</string>
+    <string name="repayment">Đã trả vay</string>
+    <string name="application_amount">Số tiền đề xuất vay</string>
+    <string name="no_loan_record">Bạn chưa có lịch sử vay nợ</string>
+
+    <!-- OnLineBackActivity -->
+    <string name="all_money">Trả toàn bộ</string>
+    <string name="part_money">Trả một phần</string>
+    <string name="delay_money">Gia hạn trả vay</string>
+
+    <!-- PersonFragment -->
+
+    <!-- RegisterActivity -->
+    <string name="regist">Đăng ký ngay</string>
+    <string name="start_regist">Bắt đầu đăng ký</string>
+    <string name="regist_protocol"> 《Thỏa thuận đăng ký》</string>
+    <string name="referrer_phone_number">Nhập SĐT người giới thiệu(Chọn điền)</string>
+    <string name="student">Sinh viên</string>
+    <string name="workers">Người đi làm</string>
+
+    <!-- RelationInfoActivity -->
+    <string name="bind_contacts_success">Kết nối thành công (phần Người liên hệ)!</string>
+    <string name="get_family_members_first">điền thông tin quan hệ gia đình trước</string>
+    <string name="get_friends_or_colleague">điền thông tin đồng sự hoặc bạn bè trước</string>
+    <string name="choose_another_relation1">Chọn liên hệ đầu tiên!</string>
+    <string name="choose_another_relation2">Chọn người liên hệ thứ hai!</string>
+    <string name="parent">Cha (Mẹ)</string>
+    <string name="spouse">Vợ (chồng)</string>
+    <string name="sister">Chị (Em)</string>
+    <string name="brother">Anh (Em)</string>
+    <string name="friend">Bạn bè</string>
+    <string name="colleague">Đồng nghiệp</string>
+    <string name="classmate">Bạn học</string>
+
+    <!-- SplashActivity -->
+    <string name="new_version">Bản mới nhất:</string>
+    <string name="update">Update ngay</string>
+    <string name="later">Để sau</string>
+    <string name="download_progress">Mức độ tải xuống</string>
+    <string name="download_progress2">Mức độ tải xuống:</string>
+    <string name="download_failed">Tải xuống thất bại!</string>
+    <string name="no_sdcard">Không tìm thấy sdcard!</string>
+    <string name="start">Bắt đầu trải nghiệm</string>
+
+    <!-- StudentInfoActivity -->
+    <string name="fill_school_name">nhập tên trường học</string>
+    <string name="fill_school_address">nhập địa chỉ trường học</string>
+    <string name="fill_class_name">nhập tên lớp</string>
+    <string name="fill_student_ID">nhập số thẻ sinh viên</string>
+    <string name="fill_admission_time">nhập thời gian nhập học</string>
+
+    <!-- UploadIdentityPhotoActivity -->
+    <string name="retake">Ảnh chụp bị lỗi. Vui lòng chụp lại!</string>
+    <string name="memory_need_more">Bộ nhớ hệ thống không đủ, xin làm sạch bộ nhớ!</string>
+
+    <!-- WorkInfoActivity -->
+    <string name="fill_company_sax">Chọn ngành nghề</string>
+    <string name="fill_company_name">nhập tên công ty</string>
+    <string name="fill_company_phone">nhập số ĐT công ty</string>
+    <string name="fill_company_address">nhập địa chỉ công ty</string>
+    <string name="fill_position">nhập cấp bậc</string>
+    <string name="fill_salary_range">xác nhận mức độ lương</string>
+    <string name="fill_entry_time">nhập thời gian bắt đầu công việc</string>
+    <string name="category1">Kinh doanh</string>
+    <string name="category2">Hành chính</string>
+    <string name="category3">Bảo vệ</string>
+    <string name="category4">Biên phiên dịch </string>
+    <string name="category5">Dệt may/ Giày da</string>
+    <string name="category6">Du lịch/ Khách sạn</string>
+    <string name="category7">Thể hình/ Spa</string>
+    <string name="category8">Mỹ phẩm/ Thời trang</string>
+    <string name="category9">Nông nghiệp</string>
+    <string name="category10">PG/ PB/ Lễ tân</string>
+    <string name="category11">Phục vụ/ Tạp vụ</string>
+    <string name="category12">Sản xuất</string>
+    <string name="category13">Tài xế/ Giao nhận</string>
+    <string name="category14">Bán thời gian</string>
+    <string name="category15">Thực phẩm/ Dịch vụ ăn uống</string>
+    <string name="category16">Tư vấn bảo hiểm</string>
+    <string name="category17">Sinh viên/ Mới tốt nghiệp</string>
+    <string name="category18">Khác</string>
+    <string name="category19">Đang tìm việc</string>
+
+    <!-- Adapter -->
+    <string name="apply_for_loan_success">** vay thành công</string>
+
+    <!-- utils -->
+    <string name="title">Tiêu đề</string>
+    <string name="content">Nội dung</string>
+    <string name="go_pay">Trả tiền</string>
+    <string name="no_agree">Không đồng ý</string>
+    <string name="agree">Đồng ý</string>
+    <string name="cancle">Hủy</string>
+    <string name="prompt">Nhắc nhở</string>
+
+    <!-- dialog -->
+    <string name="copy">Đã copy</string>
+
+    <!-- Permission -->
+    <string name="GPS_permission">Yêu cầu cấp quyền ứng dụng định vị không thành công!</string>
+    <string name="record_auto_permission">Yêu cầu cấp quyền ứng dụng ghi hình không thành công!</string>
+    <string name="EXTERNAL_STORAGE_permission">Không có quyền lưu trữ, nên không thể cập nhật app!</string>
+
+    <!-- Universal -->
+    <string name="day"> Ngày</string>
+    <string name="day15">15 Ngày</string>
+    <string name="day30">30 Ngày</string>
+    <string name="yuan">VND&#160;</string>
+    <string name="yuan2">&#160;VND</string>
+    <string name="symbol">₫ </string>
+    <string name="url_error">url bị lỗi</string>
+    <string name="data_parsing_error">Lỗi giải tích số liệu</string>
+    <string name="network_error">Lỗi đường truyền</string>
+    <string name="host_exception">Bất thường tại local</string>
+    <string name="service_exception">Bất thường trong phục vụ</string>
+    <string name="login">Đăng nhập</string>
+    <string name="problem">Các câu hỏi thường gặp</string>
+    <string name="privacy">CHÍNH SÁCH BẢO MẬT</string>
+    <string name="OK">Đồng ý</string>
+    <string name="reacquire">Nhận lại OTP</string>
+    <string name="send_code">Mã OTP</string>
+    <string name="otp">Nhận OTP</string>
+    <string name="upload_successed">Tải lên thành công!</string>
+    <string name="bind_successed">Kết nối thành công!</string>
+    <string name="regist_successed">Đăng ký thành công!</string>
+    <string name="uploading">Đang tải lên &#8230;</string>
+    <string name="upload_failture">Tải lên thất bại!</string>
+    <string name="timeout_of_network">Hết thời gian kết nối mạng, thử lại sau!</string>
+    <string name="no_network">Không có kết nối mạng!</string>
+    <string name="warm_realname">Không được để trống phần tên thật!</string>
+    <string name="warm_IDnumber">Không được để trống phần Số CMND!</string>
+    <string name="warm_IDnumber_not_match">Số CMND không chính xác!</string>
+    <string name="warm_no_phonenumber">nhập số điện thoại di động!</string>
+    <string name="warm_phonenumber_not_match">Số ĐT di động không đúng định dạng!</string>
+    <string name="warm_no_pwd">Không được để trống phần mật khẩu!</string>
+    <string name="warm_no_code">Không được để trống phần Hình xác thực!</string>
+    <string name="warm_check_protocol">Đánh dấu để chọn thỏa thuận!</string>
+    <string name="warm_check_bank_card">Số tài khoản 2 lần nhập khác nhau!</string>
+    <string name="warm_reclick_to_exit">Click lần nữa để thoát khỏi ứng dụng!</string>
+    <string name="warm_reclick_to_exit_veify">Nhấn lần nữa để thoát phần xác minh!</string>
+    <string name="warm_SSL_error">Bạn sẽ đi tới 1 trang có chứng nhận vô hiệu lực!</string>
+    <string name="wait_version">Để sử dụng chức năng này, xin đợi bản update mới!</string>
+    <string name="function_not_open">Thanh toán online đang trong quá trình sửa chữa!</string>
+    <string name="hint_address">Nhập nơi ở hiện tại</string>
+    <string name="hint_both">Nhập ngày sinh</string>
+    <string name="hint_phonenumber">Nhập số ĐTDĐ</string>
+    <string name="hint_code">Nhập mã OTP</string>
+    <string name="hint_pwd">Nhập mật khẩu</string>
+    <string name="hint_new_pwd">Nhập mật khẩu mới</string>
+    <string name="hint_bank_name">Nhập tên Ngân hàng</string>
+    <string name="hint_bank_number">Nhập đúng số TKNH</string>
+
+    <string name="phone_number">Số điện thoại</string>
+    <string name="pwd">Mật khẩu</string>
+    <string name="new_pwd">Mật khẩu mới</string>
+    <string name="check_new_pwd">Nhập lại mật khẩu mới</string>
+    <string name="hint_check_new_pwd">Nhập lại mật khẩu mới</string>
+    <string name="forget">Chưa có tài khoản &#63;</string>
+    <string name="recommander">Số ĐT người giới thiệu</string>
+
+    <string name="check_reset">Đồng ý đổi mật khẩu</string>
+    <string name="choose_profession">Vui lòng chọn đối tượng vay</string>
+    <string name="register">Đăng ký</string>
+
+    <string name="default_money">10,000,000</string>
+    <string name="fast_loan">Fast loan</string>
+    <string name="warm_pwd_not_null">Mật khẩu mới không được để trống!</string>
+    <string name="warm_pwd_not_same">Mật khẩu được nhập hai lần không giống nhau!</string>
+    <string name="warm_money_least">Số tiền vay không được thấp hơn 1 triệu đồng!</string>
+    <string name="warm_money_most">Độ tín nhiệm của bạn không đủ để vay 5 triệu đồng!</string>
+    <string name="warm_day_least">Thời hạn vay không được ngắn hơn 15 ngày!</string>
+    <string name="credit_over">Tín nhiệm của bạn chưa đủ</string>
+    <string name="bind_bankcard">Bạn chưa nhập số tài khoản NH!</string>
+
+    <string name="facebook_app_id">1169198366588999</string>
+    <string name="fb_login_protocol_scheme">fb1169198366588999</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">8bd591aadc17fa5f7f8d37310e34f656</string>
+
+    //
+    <string name="dialog_close">Đóng</string>
+
+    <string name="session_timeout">Session timeout</string>
+    <string name="txtSendOrder">SendOrder</string>
+    <string name="txtCheckOrder">CheckOrder</string>
+
+    <string name="txtNameOrder">Họ tên người thanh toán</string>
+    <string name="txtDescription">Mô tả</string>
+    <string name="txtEmail">Email người thanh toán</string>
+    <string name="txtMobile">Số điện thoại người thanh toán</string>
+    <string name="txtAddress">Địa chỉ người thanh toán</string>
+    <string name="txtAmount">Tổng số tiền đơn hàng cần thanh toán</string>
+
+    <string name="error_disconnect">Bạn cần kết nối internet</string>
+    <string name="error_name_order">Bạn cần nhập họ tên người thanh toán</string>
+    <string name="error_description">Bạn cần nhập mô tả</string>
+    <string name="error_email">Bạn cần nhập email người thanh toán</string>
+    <string name="error_mobile">Bạn cần nhập số điện thoại người thanh toán</string>
+    <string name="error_address">Bạn cần nhập địa chỉ người thanh toán</string>
+    <string name="error_amount">Bạn cần nhập số tiền đơn hàng cần thanh toán. Số tiền phải lớn hơn 100,000VND</string>
+
+    <string name="error_01">Lỗi không xác định</string>
+    <string name="error_02">merchant_id không tồn tại</string>
+    <string name="error_04">checksum không đúng</string>
+    <string name="error_05">Không ghi nhận được đơn hàng trên cổng thanh toán</string>
+    <string name="error_06">token_code không tồn tại hoặc không hợp lệ</string>
+    <string name="error_07">Đơn hàng chưa được thanh toán</string>
+    <string name="error_09">receiver_email không tồn tại</string>
+    <string name="error_11">receiver_email đang bị khóa hoặc phong tỏa không thể giao dịch</string>
+    <string name="error_20">function không đúng</string>
+    <string name="error_21">version không đúng hoặc không tồn tại</string>
+    <string name="error_22">Thiếu tham số đầu vào</string>
+    <string name="error_23">order_code mã đơn hàng không hợp lệ</string>
+    <string name="error_24">total_amount không hợp lệ</string>
+    <string name="error_25">currency không hợp lệ</string>
+    <string name="error_26">language không hợp lệ</string>
+    <string name="error_27">return_url không hợp lệ</string>
+    <string name="error_28">cancel_url không hợp lệ</string>
+    <string name="error_29">notify_url không hợp lệ</string>
+    <string name="error_30">buyer_fullname không hợp lệ</string>
+    <string name="error_31">buyer_email không hợp lệ</string>
+    <string name="error_32">buyer_mobile không hợp lệ</string>
+    <string name="error_33">buyer_address không hợp lệ</string>
+</resources>
